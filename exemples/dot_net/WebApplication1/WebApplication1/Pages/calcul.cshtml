@@ -1,0 +1,26 @@
+﻿@page
+@model WebApplication1.Pages.calculModel
+@{
+}
+<h3>listePuissances</h3>
+<form  method="get">
+    <label>n:</label><input name="N" value='@(ViewData["N"])' /> <br />
+    <button type="submit" >submit/calculer</button>
+</form>
+
+<ul>
+    @foreach (var calculXpn in ViewData["listePuissances"] as List<WebApplication1.Pages.CalculXpuissanceN>)
+       {
+        <li>@calculXpn.X puissance @calculXpn.N = @calculXpn.Xpn</li>
+       }
+</ul>
+
+<hr/>
+
+<table border="1">
+    <tr><th>x</th><th>n</th><th>x puissance n</th></tr>
+    @foreach (var calculXpn in ViewData["listePuissances"] as List<WebApplication1.Pages.CalculXpuissanceN>)
+    {
+        <tr><td>@calculXpn.X &nbsp;&nbsp;</td><td>@calculXpn.N &nbsp;&nbsp;</td><td>@calculXpn.Xpn</td></tr>
+    }
+</table>
