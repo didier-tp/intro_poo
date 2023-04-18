@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+class Compte
+{
+    //attributs (données internes) de la classe:
+    public int Numero;
+    public string Label;
+    public double Solde;
+
+    //Constructeur par défaut (avec zero paramètre)
+    //méthode speciale qui a meme nom que la classe et pas de void
+    //ça sert à initialiser les valeurs interne dès la construction (le new extérieur)
+    public Compte() {
+        this.Numero = 0;
+        this.Label = "compte";
+        this.Solde = 0;
+    }
+    //constructeur secondaire avec paramètres
+    //on appelle surcharge (overload en anglais) le fait de code plusieurs versions
+    //d'une fonction qui a le même nom (c'est faisable en c++ , en java , en c# )
+    public Compte(int numeroInitial ,string libelleInitial , double soldeInitial )
+    {
+        this.Numero = numeroInitial;
+        this.Label = libelleInitial;
+        this.Solde = soldeInitial;
+    }
+    
+    //.ToString() est une méthode spéciale (provenant de la classe Object) 
+    //qui sert à générer une chaine de caractère avec toutes les valeurs internes
+    //de l'objet courant (pratique pour vérifier valeur / debug)
+    public override string ToString()
+    {
+        return $"Compte Numero={this.Numero} Label={this.Label} Solde={this.Solde}";
+    }
+    
+    //méthodes/operations (traitement internes) de la classe:
+    public void Debiter(double montant)
+    {
+        //montant un parametre d'entrée de la méthode Debiter() de type double
+        //la méthode modifie les valeurs de l'objet courant this
+        //mais ne retourne rien (pas de return ...; )  d'où le type de retour void
+        this.Solde=this.Solde - montant;
+    }
+
+    public void Crediter(double montant)
+    {
+        this.Solde = this.Solde + montant;
+    }
+
+}
+

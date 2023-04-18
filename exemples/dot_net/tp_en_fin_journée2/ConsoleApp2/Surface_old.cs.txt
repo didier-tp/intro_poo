@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+//La classe Surface hérite de Figure pour faire bonne figure
+/* 
+ //V1 sans abstract
+class Surface : Figure
+  {
+    public virtual double Perimetre()
+    {
+        return 0; //par défaut (code qui sera redéfini/override dans les sous classes)
+    }
+  }
+*/
+
+//V2: avec abstract
+//Une classe qui comporte au moins une fonction abstraite doit être déclarée abstraite
+abstract class Surface : Figure
+{
+    public abstract  double Perimetre();
+    //une méthode déclarée abstract n'a pas de code du tout
+    //mais elle devra obligatoirement être redéfinie dans les sous classes qui vont en hériter
+}
+
