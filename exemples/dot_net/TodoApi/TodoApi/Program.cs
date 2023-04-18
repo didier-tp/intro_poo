@@ -16,6 +16,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseStaticFiles();//Ajouté pour effectuer quelques tests/
+                     //NB: il faut également ajouter le dossier wwwroot
+                     //puis placer dedans la partie cliente (html,js,css)
+                     //NB: pour accéder à wwwroot/index.html
+                     //l'url sera https://localhost:7141/index.html
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
