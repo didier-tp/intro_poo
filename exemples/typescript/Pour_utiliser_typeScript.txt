@@ -1,0 +1,9 @@
+1) installer nodeJs et npm
+2) npm install -g typescript
+3) préparer répertoire de tp
+4) dans tp , lancer tsc --init pour générer tsconfig.json
+5) ajuster "src" et "dist/js" dans tsconfig.json
+6) créer sous répertoire "src"
+7) coder src/xyz.ts
+8) lancer tsc -w dans un premier terminal
+9) lancer node dist/js/xyz.js dans un second terminal
