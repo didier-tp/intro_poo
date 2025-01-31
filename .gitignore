@@ -26,6 +26,8 @@
 **/.gradle
 **/local.properties
 **/.idea
+**/.venv
+**/__pycache__
 
 **/.DS_Store
 */build

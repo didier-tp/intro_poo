@@ -1,0 +1,4 @@
+<svg xmlns='http://www.w3.org/2000/svg' height='600' width='800'>
+<line x1='60' y1='25' x2='200' y2='175'  stroke='blue' fill='none' />
+<circle cx='250' cy='255' r='80'  stroke='red' fill='none' />
+</svg>
