@@ -1,0 +1,5 @@
+<svg xmlns='http://www.w3.org/2000/svg' height='400' width='500'><line x1='12' y1='34' 
+                     x2='345' y2='343' stroke='green' /><circle cx='200' cy='200' 
+            r='100' stroke='blue' fill='none' /><line x1='20' y1='134' 
+                     x2='245' y2='243' stroke='red' /><circle cx='300' cy='300' 
+            r='50' stroke='orange' fill='none' /></svg>
